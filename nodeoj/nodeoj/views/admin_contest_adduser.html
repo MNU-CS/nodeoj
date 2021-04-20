@@ -1,0 +1,21 @@
+<%- include header.html %>
+<%- include admin_header.html%>
+<div class="panel panel-default">
+  <div class="panel-heading">添加用户</div>
+  <div class="panel-body">
+  格式：<br>
+  账号 入口密码<br>
+  例如：<br>
+  <pre>test1 123456
+test2 112233</pre><br>
+  <form method="post">
+	<textarea name="userlist" class="form-control" style="height:300px"></textarea>
+	 <br>
+  <div class="text-center">
+    <a class="btn btn-default" href="./">返回</a>
+	<input class="btn btn-default" type="submit" value="添加用户">
+  </div>
+  </form>
+  </div>
+</div>
+<%- include footer.html %>

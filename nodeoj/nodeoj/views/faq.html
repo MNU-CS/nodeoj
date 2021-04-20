@@ -1,0 +1,50 @@
+<%- include header.html %>
+<div class="panel panel-default">
+  <div class="panel-heading">常见问题</div>
+  <div class="panel-body">
+	<p>问：可以使用哪种编程语言?<br />
+	答：目前只提供C、C++、Java和Python 2。</p>
+
+	<p>问：如何进行读取和输出?<br />
+	答：只能stdin/stdout（使用标准输入/输出），不允许读取和写入任何文件。在C/C++中可以使用scanf读取，printf输出。</p>
+
+	问：各种状态的含义是什么?<br />
+	答：如下列表：
+	<ul>
+		<li>Queuing：代码已经提交，正在等待测评</li>
+		<li>Compiling：代码正在编译</li>
+		<li>Running：编译成功，正在进行测评</li>
+		<li>Acepted：代码正确</li>
+		<li>Wrong Answer：答案错误。程序输出了错误的答案，或者多输出或者少输出了空格，换行等符号</li>
+		<li>Runtime Error：运行时错误。引发的原因有很多,包括但不仅限于使用未初始化的指针,数组越界,堆栈溢出,除数为零</li>
+		<li>Time Limit Exceeded：超出时间限制。可能是代码中包含死循环，也可能是算法不够优化</li>
+		<li>Memory Limit Exceeded：内存超出限制。你使用的内存太多了，可能由于使用了过大的数组，或是忘记释放使用过的内存导致内存泄漏</li>
+		<li>Output Limit Exceeded：你的输出超过标准答案的三倍</li>
+		<li>Compilation Error：编译错误。请检查代码在自己的机器上能否正常编译，以及是否选错了语言。在比赛中编译错误不会增加罚时</li>
+		<li>System Error：系统内部错误，请联系管理员重测</li>
+	</ul>
+
+	<p>问：各语言的编译选项是怎样的？<br />
+	答：如下列表：
+	<ul>
+		<li>C：gcc source.c -o main -O2 -Wall -DONLINE_JUDGE</li>
+		<li>C++：g++ source.cpp -o main -O2 -Wall -DONLINE_JUDGE</li>
+		<li>Java：javac Main.java</li>
+		<li>Python 2：Python采用直接运行，不进行编译</li>
+	</ul>
+	<div>
+	问：如何编写代码?<br />
+	答：以A+B Problem为例：<br /><br />
+C语言<br>
+<pre><span style="box-sizing:border-box;color:#800;font-family:Menlo,Monaco,Consolas">#<span style="box-sizing:border-box;font-weight:bold">include</span> &lt;stdio.h&gt;</span><br /><span style="box-sizing:border-box;color:#000;font-family:Menlo,Monaco,Consolas"><span style="box-sizing:border-box;font-weight:bold">int</span> <span style="box-sizing:border-box;color:#800;font-weight:bold">main</span><span style="box-sizing:border-box">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">int </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">a, b;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">scanf</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">(</span><span style="box-sizing:border-box;color:#800;font-family:Menlo,Monaco,Consolas">"%d%d"</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">, &amp;a, &amp;b);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">printf</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">(</span><span style="box-sizing:border-box;color:#800;font-family:Menlo,Monaco,Consolas">"%d\n"</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">, a + b);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">return </span><span style="box-sizing:border-box;color:#080;font-family:Menlo,Monaco,Consolas">0</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">;<br />}</span><br /></pre><br>
+C++<br>
+<pre><span style="box-sizing:border-box;color:#800;font-family:Menlo,Monaco,Consolas">#<span style="box-sizing:border-box;font-weight:bold">include</span> &lt;iostream&gt;</span><br /><span style="box-sizing:border-box;color:#000;font-family:Menlo,Monaco,Consolas"><span style="box-sizing:border-box;font-weight:bold">int</span> <span style="box-sizing:border-box;color:#800;font-weight:bold">main</span><span style="box-sizing:border-box">()</span></span><br /><span style="color:#000;font-family:Menlo,Monaco,Consolas">{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">using </span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">namespace </span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">std</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">int </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">a, b;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">cin </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">&gt;&gt; a &gt;&gt; b;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">cout </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">&lt;&lt; a + b &lt;&lt; endl;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">return </span><span style="box-sizing:border-box;color:#080;font-family:Menlo,Monaco,Consolas">0</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">;<br />}</span><br /></pre><br>
+Java<br>
+<pre><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">import </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">java.io.BufferedInputStream;</span><br /><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">import </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">java.util.Scanner;</span><br /><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">public </span><span style="box-sizing:border-box;color:#000;font-family:Menlo,Monaco,Consolas"><span style="box-sizing:border-box;font-weight:bold">class</span> <span style="box-sizing:border-box;color:#800;font-weight:bold">Main </span></span><span style="color:#000;font-family:Menlo,Monaco,Consolas">{</span><br /><span style="box-sizing:border-box;color:#000;font-family:Menlo,Monaco,Consolas"><span style="box-sizing:border-box;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;public</span> <span style="box-sizing:border-box;font-weight:bold">static</span> <span style="box-sizing:border-box;font-weight:bold">void</span> <span style="box-sizing:border-box;color:#800;font-weight:bold">main</span><span style="box-sizing:border-box">(String[] args) </span></span><span style="color:#000;font-family:Menlo,Monaco,Consolas">{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner sc = </span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">new </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">Scanner(</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">new </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">BufferedInputStream(System.in));</span><br /><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">{</span><br /><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">a = sc.nextInt(), b = sc.nextInt();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(a + b);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">finally </span><span style="color:#000;font-family:Menlo,Monaco,Consolas">{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc.close();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span><br /></pre><br>
+Python 2.7<br>
+<pre><span style="color:#000;font-family:Menlo,Monaco,Consolas">a, b = </span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">map</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">(</span><span style="box-sizing:border-box;font-weight:700;color:#000;font-family:Menlo,Monaco,Consolas">int</span><span style="color:#000;font-family:Menlo,Monaco,Consolas">, raw_input().split())<br />print a + b</span></pre><br>
+	</div>
+  </div>
+</div>
+
+<%- include footer.html %>

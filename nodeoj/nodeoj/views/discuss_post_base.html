@@ -1,0 +1,42 @@
+<%
+var iscontest=(typeof(contest)!=='undefined'&&contest);
+var conteststr=iscontest?'/C/'+contest.id:'';
+var constetstr2=iscontest?'Contest':'';
+var constetstr3=iscontest?contest.id+',':'';
+%>
+<div class="panel panel-default">
+<div class="panel-body">
+	<h3 style="margin-bottom:2px;margin-top:5px;">
+		<%if(post.problem){%><a class="label label-primary" href="<%=conteststr%>/Discuss/P/<%-post.problem%>"><%=contest?'':'P'%><%-post.problem%></a> <%}%>
+		<%=post.title%>
+		<%if(post.problem){%><a href="<%=conteststr%>/P/<%-post.problem%>">查看 <%-contest?'':'P'%><%-post.problem%></a> <%}%>
+		<%if(isadmin){%>
+		
+		<%if(post.stick){%>
+		<a href="#" class="label label-default" onclick="<%-constetstr2%>UnstickPost(<%-constetstr3%>'<%-post._id%>');">取消置顶</a>
+		<%}else{%>
+		<a href="#" class="label label-danger" onclick="<%-constetstr2%>StickPost(<%-constetstr3%>'<%-post._id%>');">置顶</a>
+		<%}%>
+		<a href="/admin<%=conteststr%>/Discuss/<%-post._id%>/edit" class="label label-primary">编辑</a>
+		<a href="#" class="label label-primary" onclick="<%-constetstr2%>DeletePost(<%-constetstr3%>'<%-post._id%>');">删除</a>
+		<%}%>
+	</h3>
+
+	<span class="mintext">
+	<a href="/User/<%=post.author%>"><%=post.author%></a> 提交于 <%=post.date.toNiceTime()%>
+	</span>
+	<pre style="margin-top:10px;" class="SlateFix"><%=post.content%></pre>
+</div>
+</div>
+<%for(var i=0;i<post.replay.length;i++){%>
+<div class="panel panel-default">
+<div class="panel-body">
+	<span class="mintext">
+	<a href="/User/<%=post.replay[i].author%>"><%=post.replay[i].author%></a> 提交于 <%=post.replay[i].date.toNiceTime()%>
+	<%if(isadmin){%><a class="label label-primary" href="#" onclick="<%-constetstr2%>DeleteReplay(<%-constetstr3%>'<%-post._id%>','<%-post.replay[i]._id%>');">删除</a><%}%>
+	</span>
+	<pre style="margin-top:10px;" class="SlateFix"><%=post.replay[i].content%></pre>
+</div>
+</div>
+<%}%>
+<%-include newtopic.html%>

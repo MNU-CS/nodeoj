@@ -1,0 +1,25 @@
+<%var pageend=req._parsedUrl.search||'';%>
+<ul class="pagination">
+  <li><a href="/<%=pageName%>/<%=pageend%>">&laquo;</a></li>
+  <li><a href="/<%=pageName%>/<%=Math.max(1,curPage-1)%>/<%=pageend%>">&lt;</a></li>
+	<%
+	var pages=5;
+	var lp=Math.min(curPage,Math.ceil(pages/2));
+	pages-=lp;
+	for(var i=curPage-lp+1;i<curPage;i++){
+	%>
+	<li><a href="/<%=pageName%>/<%=i%>/<%=pageend%>"><%=i%></a></li>
+	<%
+	}
+	%>
+	<li class="active"><a href="/<%=pageName%>/<%=curPage%>/<%=pageend%>"><%=curPage%></a></li>
+	<%
+	for(var i=1;i<=Math.min(pages,maxPage-curPage);i++){
+	%>
+	<li><a href="/<%=pageName%>/<%=curPage+i%>/<%=pageend%>"><%=curPage+i%></a></li>
+	<%
+	}
+	%>
+  <li><a href="/<%=pageName%>/<%=Math.min(maxPage,curPage+1)%>/<%=pageend%>">&gt;</a></li>
+  <li><a href="/<%=pageName%>/<%=maxPage%>/<%=pageend%>">&raquo;</a></li>
+</ul>

@@ -1,0 +1,47 @@
+<%- include header.html %>
+<%- include admin_header.html%>
+<div class="panel panel-default">
+  <div class="panel-heading">编辑评测数据</div>
+  <div class="panel-body">
+	<div class="panel panel-default">
+		<table class="table table-striped table-hover">
+		<thead>
+		  <tr>
+			<th>数据序号</th>
+			<th>数据总规模(B)</th>
+			<th>查看</th>
+			<th>删除摁钮</th>
+		  </tr>
+		</thead>
+		<tbody>
+		<%for(var i=0;i<datas.length;i++){%>
+		  <tr id="data_<%=datas[i].id%>">
+			<td><%=datas[i].id%></td>
+			<td><%=datas[i].length%></td>
+			<td><a href="./data/<%=datas[i].id%>">点击这里查看</a></td>
+			<td><a href="javascript:DeleteData(<%=datas[i].id%>);">删除</a></td>
+		  </tr>
+		<%}%>
+		</tbody>
+	  </table>
+	</div>
+  <form method="post">
+	<div class="row">
+		<div class="col-xs-6">
+			<h3>输入数据</h3>
+			<textarea name="input" class="form-control" style="height:100px"></textarea>
+		</div>
+		<div class="col-xs-6">
+			<h3>输出数据</h3>
+			<textarea name="output" class="form-control" style="height:100px"></textarea>
+		</div>
+	</div>
+	 <br>
+  <div class="text-center">
+    <a class="btn btn-default" href="./">返回</a>
+	<input class="btn btn-default" type="submit" value="添加数据">
+  </div>
+  </form>
+  </div>
+</div>
+<%- include footer.html %>

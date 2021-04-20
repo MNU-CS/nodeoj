@@ -1,0 +1,17 @@
+<%- include header.html %>
+<%- include admin_header.html%>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<p>您好, <%=(userinfo?userinfo.username:"骇客")%>。 您可以使用以下功能：</p>
+		<ul>
+			<li>摁钮“添加题目”可以添加题目到题目列表。</li>
+			<li>摁钮“添加比赛”可以添加比赛到比赛列表，请注意比赛中所有题目都应源自题目列表，请事先隐藏好对应的题目。</li>
+			<li>摁钮“评测机”可以查看评测机状态，并增删评测机。</li>
+			<li>摁钮“编辑题目”和“编辑用户”让您可以修改现有的指定题目或指定用户。</li>
+			<li>您应当对讨论内容负责，采用人工审查的方法，对违规讨论赛题解法的用户予以封禁、帖子予以删除。</li>
+		</ul>
+	</div>
+</div>
+
+<%- include footer.html %>

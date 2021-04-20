@@ -1,0 +1,85 @@
+<%- include header.html %>
+<div class="panel panel-default">
+  <div class="panel-heading">用户信息</div>
+  <div class="panel-body">
+  <form method="post">
+	<div class="panel panel-default float-center" style="width:450px;">
+	<table class="table">
+		<tr>
+			<td>用户名</td>
+			<td><%=userinfo.username%></td>
+		</tr>
+		<tr>
+			<td>电子邮件</td>
+			<td><%=userinfo.email%></td>
+		</tr>
+		<tr>
+			<td>用户组</td>
+			<td><%=["普通用户","管理员"][userinfo.userGroup]%></td>
+		</tr>
+		<tr>
+			<td>注册时间</td>
+			<td><%=userinfo.regDate.toNiceDate()%></td>
+		</tr>
+		<tr>
+			<td>上次登录</td>
+			<td><%=userinfo.lastLogin.toNiceDate()%></td>
+		</tr>
+		<tr>
+			<td>提交次数</td>
+			<td><%=userinfo.submissions%></td>
+		</tr>
+		<tr>
+			<td>通过次数</td>
+			<td><%=userinfo.accepted%></td>
+		</tr>
+		<tr>
+			<td>通过率</td>
+			<td><%=(userinfo.accepted/userinfo.submissions*100).toFixed(2)%>%</td>
+		</tr>
+		<tr>
+			<td>座右铭</td>
+			<td><textarea class="form-control" name="motto"><%=userinfo.motto%></textarea></td>
+		</tr>
+		<tr>
+			<td>旧密码</td>
+			<td><input name="oldpassword" class="form-control sminput" type="password"></td>
+		</tr>
+		<tr>
+			<td>新密码</td>
+			<td><input name="newpassword" class="form-control sminput" type="password"></td>
+		</tr>
+		<tr>
+			<td>确认新密码</td>
+			<td><input name="repassword" class="form-control sminput" type="password"></td>
+		</tr>
+	</table>
+	<div class="text-center"><input type="submit" class="btn btn-default" value="提交修改"></div>
+	<br>
+	</div>
+	</form>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">最近通过的题目</div>
+  <div class="panel-body">
+	<%
+		var unsolved=[];
+		for(var x in userinfo.submitted)
+			if(userinfo.submitted[x]=='Accepted'){%>
+			<a href="/P/<%=x%>" class="label label-primary"><%=x%></a>
+			<%}else{
+				unsolved.push(x);
+			}
+	%>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">最近未通过的题目</div>
+  <div class="panel-body">
+  <%for(var i=0;i<unsolved.length;i++){%>
+	<a href="/P/<%=unsolved[i]%>" class="label label-default"><%=unsolved[i]%></a>
+  <%}%>
+  </div>
+</div>
+<%- include footer.html %>

@@ -1,0 +1,15 @@
+{
+	"apps": [{
+		"name": "NodeOJ-Judger",
+		"script": "./judger/judger.js",
+		"cwd": "./judger/",
+		"error_file": "./logs/judger-err.log",
+		"out_file": "./logs/judger-out.log"
+	}, {
+		"name": "NodeOJ-HTTP",
+		"script": "./nodeoj/app.js",
+		"cwd": "./nodeoj/",
+		"error_file": "./logs/http-err.log",
+		"out_file": "./logs/http-out.log"
+	}]
+}

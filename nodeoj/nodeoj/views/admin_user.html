@@ -1,0 +1,76 @@
+<%- include header.html %>
+<%- include admin_header.html%>
+<div class="panel panel-default">
+  <div class="panel-heading">编辑用户</div>
+  <div class="panel-body">
+  <form method="post">
+	<div class="panel panel-default float-center" style="width:450px;">
+	<table class="table">
+		<tr>
+			<td>账号</td>
+			<td><%=user.username%></td>
+		</tr>
+		<tr>
+			<td>注册时间</td>
+			<td><%=user.regDate.toNiceDate()%></td>
+		</tr>
+		<tr>
+			<td>上次登录</td>
+			<td><%=user.lastLogin.toNiceDate()%></td>
+		</tr>
+		<tr>
+			<td>电子邮件</td>
+			<td><input name="email" value="<%=user.email%>" class="form-control sminput" type="text"></td>
+		</tr>
+		<%if(userinfo.userGroup>=1&&userinfo.userGroup!=233){%>
+		<tr>
+			<td>密码</td>
+			<td><input name="password" value="<%=user.password%>" class="form-control sminput" type="text"></td>
+		</tr>
+		<tr>
+			<td>用户分组(0或1)</td>
+			<td><input name="userGroup" value="<%=user.userGroup%>" class="form-control sminput" type="text"></td>
+		</tr>
+		<%}%>
+		<tr>
+			<td>提交次数</td>
+			<td><input name="submissions" value="<%=user.submissions%>" class="form-control sminput" type="text"></td>
+		</tr>
+		<tr>
+			<td>通过次数</td>
+			<td><input name="accepted" value="<%=user.accepted%>" class="form-control sminput" type="text"></td>
+		</tr>
+		<tr>
+			<td>座右铭</td>
+			<td><textarea class="form-control" name="motto"><%=user.motto%></textarea></td>
+		</tr>
+	</table>
+	<div class="text-center"><input type="submit" class="btn btn-default" value="提交修改"></div>
+	<br>
+	</div>
+	</form>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">最近通过的题目</div>
+  <div class="panel-body">
+	<%
+		var unsolved=[];
+		for(var x in user.submitted)
+			if(user.submitted[x]=='Accepted'){%>
+			<a href="/P/<%=x%>" class="label label-primary"><%=x%></a>
+			<%}else{
+				unsolved.push(x);
+			}
+	%>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">最近未通过的题目</div>
+  <div class="panel-body">
+  <%for(var i=0;i<unsolved.length;i++){%>
+	<a href="/P/<%=unsolved[i]%>" class="label label-default"><%=unsolved[i]%></a>
+  <%}%>
+  </div>
+</div>
+<%- include footer.html %>

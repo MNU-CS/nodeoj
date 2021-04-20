@@ -1,0 +1,62 @@
+<!--<meta http-equiv="refresh" content="10">-->
+<%- include status_filter.html %>
+<%var iscontest=(typeof(contest)!=='undefined'&&contest);%>
+<div class="panel panel-default">
+	<table class="table table-striped table-hover">
+	<thead>
+	  <tr>
+		<th>运行序号</th>
+		<th>提交者</th>
+		<th>题目序号</th>
+		<th>状态</th>
+		<%if(!iscontest||isadmin||!contest.rule||contest.end<new Date()){%>
+		<th>时间(ms)</th>
+		<th>内存(KB)</th>
+		<%}%>
+		<th>语言</th>
+		<th>代码长度(B)</th>
+		<th>提交时间</th>
+	  </tr>
+	</thead>
+	<tbody>
+	<%for(var i=0;i<status.length;i++){%>
+	  <tr>
+		<td><%=status[i].id%>
+			<%if(isadmin){%>
+			<a class="label label-primary" href="javascript:<%if(iscontest){%>Recontestjudge(<%=contest.id%>,<%=status[i].id%>)<%}else{%>Rejudge(<%=status[i].id%>)<%}%>;">重测</a>
+			<%}%>
+		</td>
+		<td><a href="/User/<%=status[i].user%>"><%=status[i].user%></a></td>
+		<td><a href="<%if(iscontest){%>/C/<%=contest.id%><%}%>/P/<%=status[i].problem%>"><%=status[i].problem%></a></td>
+		<%if(!iscontest||isadmin||!contest.rule||contest.end<new Date()){%>
+		<td><a class="label" href="<%if(iscontest){%>/C/<%=contest.id%><%}%>/Status/detail/<%=status[i].id%>" data-status="<%=status[i].status%>"><%=status[i].status%></a></td>
+		<%}else{
+			var oi_status,oi_class;
+			if(status[i].status=='Compile Error')
+			{
+				oi_status='Compile Error';
+				oi_class='Compile Error';
+			}
+			else
+			{
+				oi_status='Submit Success';
+				oi_class='Accepted';
+			}
+			%>
+			<td><a class="label" data-status="<%=oi_class%>" href="<%if(iscontest){%>/C/<%=contest.id%><%}%>/Status/detail/<%=status[i].id%>"><%=oi_status%></a></td>
+		<%}%>
+		<%if(!iscontest||isadmin||!contest.rule||contest.end<new Date()){%>
+		<td><%=status[i].time%></td>
+		<td><%=status[i].memory%></td>
+		<%}%>
+		<td><%=status[i].language%></td>
+		<td><%=status[i].code.length%></td>
+		<td><%=status[i].date.toNiceTime()%></td>
+	  </tr>
+	<%}%>
+	</tbody>
+  </table>
+</div>
+<div class="text-center">
+<%- include pagination.html %>
+</div>

@@ -1,0 +1,31 @@
+<div class="text-center">
+<%- include pagination.html %>
+</div>
+<%var iscontest=(typeof(contest)!=='undefined'&&contest);%>
+<form<%if(curPage!=1){%> action="../"<%}%>>
+	<div class="input-group" style="padding-bottom:15px;">
+	  <span class="input-group-addon">提交者</span>
+	  <input name="user" type="text" value="<%-req.query.user%>" class="form-control">
+	  <span class="input-group-addon">题目序号</span>
+	  <input name="problem" type="text" value="<%-req.query.problem%>" class="form-control">
+	  <%if(!iscontest||isadmin||!contest.rule||contest.end<new Date){%>
+	  <span class="input-group-addon">状态</span>
+		<select name="status" class="form-control">
+			<option value="">全部</option>
+			<%for(var i=0;i<AllowStatus.length;i++){%>
+			<option <%if(req.query.status==AllowStatus[i]){%>selected <%}%>value="<%-AllowStatus[i]%>"><%-AllowStatus[i]%></option>
+			<%}%>
+		</select>
+		<%}%>
+	  <span class="input-group-addon">语言</span>
+		<select name="language" class="form-control">
+			<option value="">全部</option>
+			<%for(var i=0;i<AllowLanguage.length;i++){%>
+			<option <%if(req.query.language==AllowLanguage[i]){%>selected <%}%>value="<%-AllowLanguage[i]%>"><%-AllowLanguage[i]%></option>
+			<%}%>
+		</select>
+      <span class="input-group-btn">
+        <button class="btn btn-default">查询</button>
+      </span>
+	</div>
+</form>

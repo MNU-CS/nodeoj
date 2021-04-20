@@ -1,0 +1,20 @@
+<%- include header.html %>
+
+<%if(typeof(message)=='undefined'){
+message=status;
+}%>
+<div class="panel panel-default">
+<div class="panel-body">
+<h1>错误:</h1>
+<h3><%= message %></h3>
+<a class="btn btn-default" href="javascript:history.go(-1);">返回</a>
+<a href="javascript:location.reload();" class="btn btn-default">重试</a>
+</div>
+</div>
+
+<%if(isadmin&&typeof(err)!='undefined'&&err){%>
+<h1><%= err.message %></h1>
+<h2><%= status %></h2>
+<pre><%= err.stack %></pre>
+<%}%>
+<%- include footer.html %>

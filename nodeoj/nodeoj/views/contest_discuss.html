@@ -1,0 +1,12 @@
+<%- include contest_header.html %>
+<script>
+$("#godiscuzproblem").click(function(){
+	location.href="/Discuss/P"+$("#discuzproblem").val();
+});
+</script>
+<%-include discuss_sub.html%>
+<div class="text-center"><%- include pagination.html%></div>
+<%-include newtopic.html%>
+  </div>
+</div>
+<%- include footer.html %>

@@ -1,0 +1,16 @@
+<%- include contest_header.html %>
+<div class="text-center">
+	<ul class="pagination">
+		<%for(var i=0;i<contest.problem.length;i++){%>
+		  <li id="p_<%=contest.problem[i].id%>"><a href="/C/<%=contest.id%>/P/<%=contest.problem[i].id%>"><%=contest.problem[i].id%></a></li>
+		<%}%>
+	</ul>
+</div>
+
+<%var submitaction='/C/'+contest.id+'/P/'+pid+'/submit';%>
+<%- include problem_base.html %>
+
+  </div>
+</div>
+
+<%- include footer.html %>

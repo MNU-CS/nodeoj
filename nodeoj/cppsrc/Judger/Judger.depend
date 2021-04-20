@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1412424530 source:e:\project\judger\main.cpp
+	"judger.h"
+
+1412073532 source:e:\project\judger\compile.cpp
+	"judger.h"
+
+1412418756 e:\project\judger\judger.h
+	"windows.h"
+	"psapi.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<erona>
+
+1412314519 source:e:\project\judger\judge.cpp
+	"judger.h"
+	<erona>
+
+1412394079 source:e:\project\judger\judger.cpp
+	"judger.h"
+
+1412427719 source:e:\project\judger\protector.cpp
+	"judger.h"
+
+1412427773 source:e:\project\judger\runner.cpp
+	"judger.h"
+
+1412355268 source:e:\project\judger\validator.cpp
+	"judger.h"
+
+1491966125 source:d:\graduation_project\cpp\judger\judger.cpp
+	"judger.h"
+
+1491965114 d:\graduation_project\cpp\judger\judger.h
+	"windows.h"
+	"psapi.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1491968627 source:d:\graduation_project\cpp\judger\main.cpp
+	"judger.h"
+
+1455621216 source:d:\graduation_project\cpp\judger\runner.cpp
+	"judger.h"
+
+1469864148 source:d:\graduation_project\cpp\judger\validator.cpp
+	"judger.h"
+
+1491968114 source:d:\graduation_project\cpp\judger\protector.cpp
+	"judger.h"
+
+1491976713 source:d:\毕设\cpp\judger\judger.cpp
+	"judger.h"
+
+1491965114 d:\毕设\cpp\judger\judger.h
+	"windows.h"
+	"psapi.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1491968627 source:d:\毕设\cpp\judger\main.cpp
+	"judger.h"
+
+1491968114 source:d:\毕设\cpp\judger\protector.cpp
+	"judger.h"
+
+1455621216 source:d:\毕设\cpp\judger\runner.cpp
+	"judger.h"
+
+1469864148 source:d:\毕设\cpp\judger\validator.cpp
+	"judger.h"
+

@@ -1,0 +1,54 @@
+(node:2648) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:357:11)
+    at ServerResponse.header (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:662:10)
+    at ServerResponse.send (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:146:12)
+    at fn (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:896:10)
+    at View.exports.renderFile [as engine] (D:\services\nodeoj\nodeoj\node_modules\ejs\lib\ejs.js:318:3)
+    at View.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\application.js:527:10)
+    at ServerResponse.res.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:900:7)
+    at D:\services\nodeoj\nodeoj\app.js:111:9
+    at Layer.handle_error (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\layer.js:58:5)
+    at trim_prefix (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:268:13)
+    at D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:237:9
+    at Function.proto.process_params (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:312:12)
+    at D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:228:12
+    at Function.match_layer (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:295:3)
+    at IncomingMessage.next (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:189:10)
+(node:2684) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+(node:2536) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:357:11)
+    at ServerResponse.header (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:662:10)
+    at ServerResponse.send (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:146:12)
+    at fn (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:896:10)
+    at View.exports.renderFile [as engine] (D:\services\nodeoj\nodeoj\node_modules\ejs\lib\ejs.js:318:3)
+    at View.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\application.js:527:10)
+    at ServerResponse.res.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:900:7)
+    at D:\services\nodeoj\nodeoj\app.js:111:9
+    at Layer.handle_error (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\layer.js:58:5)
+    at trim_prefix (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:268:13)
+    at D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:237:9
+    at Function.proto.process_params (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:312:12)
+    at D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:228:12
+    at Function.match_layer (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:295:3)
+    at IncomingMessage.next (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:189:10)
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:357:11)
+    at ServerResponse.header (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:662:10)
+    at ServerResponse.send (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:146:12)
+    at fn (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:896:10)
+    at View.exports.renderFile [as engine] (D:\services\nodeoj\nodeoj\node_modules\ejs\lib\ejs.js:318:3)
+    at View.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\view.js:76:8)
+    at Function.app.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\application.js:527:10)
+    at ServerResponse.res.render (D:\services\nodeoj\nodeoj\node_modules\express\lib\response.js:900:7)
+    at D:\services\nodeoj\nodeoj\app.js:111:9
+    at Layer.handle_error (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\layer.js:58:5)
+    at trim_prefix (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:268:13)
+    at D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:237:9
+    at Function.proto.process_params (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:312:12)
+    at D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:228:12
+    at Function.match_layer (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:295:3)
+    at IncomingMessage.next (D:\services\nodeoj\nodeoj\node_modules\express\lib\router\index.js:189:10)

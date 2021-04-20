@@ -1,0 +1,21 @@
+<%- include header.html %>
+<h1 class="text-center"><%=contest.title%><%if(isadmin){%>
+<a class="label label-primary" href="/admin/contest/<%=contest.id%>">编辑</a>
+<a class="label label-success" href="/admin/contest/<%=contest.id%>/adduser">添加用户</a>
+<a class="label label-danger" href="/admin/contest/<%=contest.id%>/similary">检查相似性</a>
+<%}%></h1>
+<div class="panel panel-default">
+	<div id="contesthead" class="panel-heading" style="padding:0 0 0 0;">
+		<ul class="nav nav-tabs" role="tablist">
+		  <li id="c_overview" role="presentation"><a href="/C/<%=contest.id%>">总览</a></li>
+		  <%if(isadmin||new Date>contest.begin){%>
+		  <li id="c_problem" role="presentation"><a href="/C/<%=contest.id%>/P">题目</a></li>
+		  <li id="c_status" role="presentation"><a href="/C/<%=contest.id%>/Status">状态</a></li>
+		  <%if(isadmin||!contest.rule||new Date>contest.end){%>
+		  <li id="c_discuss" role="presentation"><a href="/C/<%=contest.id%>/Discuss">讨论</a></li>
+		  <li id="c_rank" role="presentation"><a href="/C/<%=contest.id%>/Rank">排名</a></li>
+		  <%}%>
+		  <%}%>
+		</ul>
+	</div>
+    <div class="panel-body">

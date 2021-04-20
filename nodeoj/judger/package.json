@@ -1,0 +1,15 @@
+{
+  "name": "Judger",
+  "version": "1.0.0",
+  "description": "Judger for NodeOJ",
+  "main": "judger.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "async":"2.3.0",
+    "iconv-lite":"0.4.16",
+    "split":"1.0.0"
+  }
+}

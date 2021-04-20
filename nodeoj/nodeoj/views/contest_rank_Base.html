@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+	<table class="table table-striped table-hover text-center">
+	<thead>
+	  <tr>
+		<th>名次</th>
+		<th>用户</th>
+		<th>解决题目</th>
+		<th>错误次数</th>
+		<%for(var i=0;i<contest.problem.length;i++){
+			var ssc=contest.sscount[contest.problem[i].id];
+		%>
+		<th><a href="/C/<%=contest.id%>/P/<%=contest.problem[i].id%>"><%=contest.problem[i].id%>(<%=ssc.solved%>/<%=ssc.submit%>)</a></th>
+		<%}%>
+	  </tr>
+	</thead>
+	<tbody>
+	<%var first={};//题目:第i个人
+	for(var i=0;i<rank.length;i++){%>
+	  <tr data-rank="<%=i+1%>">
+		<td><%=i+1%></td>
+		<td><a href="/User/<%=rank[i].user%>"><%=rank[i].user%></a></td>
+		<td><%=rank[i].solved%></td>
+		<td><%=parseInt(rank[i].penalty/60000)%></td>
+		<%
+		
+		for(var j=0;j<contest.problem.length;j++){
+			var id=contest.problem[j].id; //题目
+			var ppp=contestant[rank[i].user][id];//第i个人的id题
+			
+			if(ppp&&ppp.cnt>=0)
+			{
+				if(first[id]===undefined)first[id]=i;
+				var xxx=contestant[rank[first[id]].user][id];
+				if(ppp.time<xxx.time)first[id]=i;
+			}
+		%>
+			<td id="td_<%=id%>_<%=i%>" class="SlateFixBlack <%-ppp?ppp.cnt<0?'rankno':'rankyes':''%>"><%-ppp?ppp.cnt>=0?'+'+ppp.cnt+'<br>'+ppp.time.ms2time():ppp.cnt:''%></td>
+		<%
+		}%>
+	  </tr>
+	<%}%>
+	</tbody>
+  </table>
+</div>
+<script>
+var first=<%-JSON.stringify(first)%>;
+for(var x in first)$("#td_"+x+"_"+first[x]).removeClass('rankyes').addClass('rankfirst');
+</script>

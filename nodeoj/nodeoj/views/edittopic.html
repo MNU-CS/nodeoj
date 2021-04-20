@@ -1,0 +1,24 @@
+<%- include header.html %>
+<%
+var conteststr=typeof(contest)!=='undefined'?'/C/'+contest:'';
+%>
+<form method="post" class="panel panel-default">
+<div class="panel-body">
+	<h3 style="margin-bottom:2px;margin-top:5px;">
+		<%if(post.problem){%><a href="<%-conteststr%>/P/<%-post.problem%>">[P<%-post.problem%>]</a> <%}%>
+		<a href="<%-conteststr%>/Discuss/<%=post._id%>"><%=post.title%></a>
+		<a href="#" onclick="DeletePost('<%-post._id%>');">[删除]</a>
+	</h3>
+
+	<span class="mintext">
+	<a href="/User/<%=post.author%>"><%=post.author%></a>提交于<%=post.date.toNiceTime()%>
+	</span>
+	<div class="input-group">
+	  <span class="input-group-addon">Title</span>
+	  <input type="text" name="title" value="<%=post.title%>"class="form-control">
+	</div>
+	<textarea data-ctrlenter="#post_submit" name="content" style="margin-top:8px;height:150px" class="form-control"><%=post.content%></textarea>
+	<button id="post_submit" style="margin-top:10px;" class="btn btn-default">提交修改</button>
+</div>
+</form>
+<%- include footer.html %>

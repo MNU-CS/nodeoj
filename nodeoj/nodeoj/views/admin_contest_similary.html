@@ -1,0 +1,52 @@
+<%- include header.html %>
+<link rel="stylesheet" href="/highlight/styles/default.css">
+<script src="/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad("C","C++","Java","Python");</script>
+
+<%- include admin_header.html%>
+<div class="panel panel-default">
+  <div class="panel-heading">比赛<%=cid%>的相似性：</div>
+  <div class="panel-body">
+  	代码数量：<%-codenum%><br>
+	时间花费：<%=time%>毫秒<br>
+	<%for(var i=0;i<sim.length;i++){%>
+	<a  id="smy_<%-i%>"href="#sim_<%-i%>">[<%=sim[i].problem%>] Similary:<%=(sim[i].similary*100).toFixed(2)%>% [<%=sim[i].copy.user%>](#<%=sim[i].copy.id%>) copy [<%=sim[i].origin.user%>](#<%=sim[i].origin.id%>)</a><br>
+	<%}%>
+	<hr>
+	<%for(var i=0;i<sim.length;i++){
+		var copycat=sim[i].copy.user+'(<a target="_Blank" href="/C/'+cid+'/Status/detail/'+sim[i].copy.id+'">#'+sim[i].copy.id+'</a>)';
+		var origin=sim[i].origin.user+'(<a target="_Blank" href="/C/'+cid+'/Status/detail/'+sim[i].origin.id+'">#'+sim[i].origin.id+'</a>)';
+	%>
+	<div id="sim_<%-i%>">
+	<a href="#smy_<%-i%>"><span class="glyphicon glyphicon-arrow-up"></span> Back to Summary</a><br>
+	problem:<a href="/C/<%-cid%>/P/<%-sim[i].problem%>"><%-sim[i].problem%></a><br>
+	similary:<%-sim[i].similary==1?'<span class="label label-danger">Exactly Cheat</span>':(sim[i].similary*100).toFixed(2)+'%'%><br>
+	<%-copycat%> copy from <%-origin%><br>
+	<div class="row">
+		<div class="col-xs-6">
+			copycat:<%-copycat%><br>
+			<pre class="padding-0"><code class="<%-sim[i].copy.language%>"><%=sim[i].copy.code%></code></pre>
+		</div>
+		<div class="col-xs-6">
+			origin:<%-origin%><br>
+			<pre class="padding-0"><code class="<%-sim[i].origin.language%>"><%=sim[i].origin.code%></code></pre>
+		</div>
+	</div>
+	 </div>
+	<hr>
+	<%}%>
+  </div>
+</div>
+<%- include footer.html %>
+<script>
+$('[data-lang]').each(function(){
+CodeMirror.fromTextArea(this, {
+	indentUnit: 4,
+	lineNumbers: true,
+	matchBrackets: true,
+	readOnly:true,
+	maxHighlightLength:20,
+	mode:  codemode[$(this).attr('data-lang')]
+});
+});
+</script>

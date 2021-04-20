@@ -1,0 +1,36 @@
+<%- include header.html %>
+<div class="text-center"><%- include pagination.html %></div>
+
+<div class="panel panel-default">
+	<table class="table table-striped table-hover">
+	<thead>
+	  <tr>
+		<th>名次</th>
+		<th>账号</th>
+		<th>座右铭</th>
+		<th>通过数</th>
+		<th>提交数</th>
+		<th>通过率</th>
+	  </tr>
+	</thead>
+	<tbody>
+	<%for(var i=0;i<ranklist.length;i++){%>
+	  <tr>
+		<td><%=i+1%></td>
+		<td>
+			<a href="/User/<%=ranklist[i].username%>"><%=ranklist[i].username%></a>
+			<%if(isadmin){%>
+			<a class="float-right label label-primary" href="/admin/user/<%=ranklist[i].username%>">编辑</a>
+			<%}%>
+		</td>
+		<td><%=ranklist[i].motto%></td>
+		<td><%=ranklist[i].accepted%></td>
+		<td><%=ranklist[i].submissions%></td>
+		<td><%=(ranklist[i].accepted/ranklist[i].submissions*100).toFixed(2)%>%</td>
+	  </tr>
+	<%}%>
+	</tbody>
+  </table>
+</div>
+<div class="text-center"><%- include pagination.html %></div>
+<%- include footer.html %>

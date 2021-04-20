@@ -1,0 +1,509 @@
+connect closed
+23:Start Judge
+23:Compiling
+23:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/23/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/23/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/23/
+23:Time Limit Exceeded
+connect closed
+24:Start Judge
+24:Compiling
+24:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/24/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/24/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/24/
+24:Time Limit Exceeded
+connect closed
+connect closed
+24:Start Judge
+24:Compiling
+24:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/24/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/24/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/24/
+24:Accepted
+connect closed
+23:Start Judge
+23:Compiling
+23:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/23/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/23/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/23/
+23:Accepted
+connect closed
+25:Start Judge
+25:Compiling
+25:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/25/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/25/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/25/
+25:Accepted
+connect closed
+25:Start Judge
+25:Compiling
+25:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/25/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/25/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/25/
+25:Accepted
+connect closed
+connect closed
+connect closed
+29:Start Judge
+29:Compiling
+29:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 4.in 4.out 4.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 5.in 5.out 5.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 6.in 6.out 6.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 7.in 7.out 7.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 8.in 8.out 8.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 9.in 9.out 9.ans 1000 65535 380 ./rundir/29/
+cmd is ..\..\Judger "main" 10.in 10.out 10.ans 1000 65535 380 ./rundir/29/
+29:Accepted
+connect closed
+30:Start Judge
+30:Compiling
+30:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/30/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/30/
+30:Accepted
+connect closed
+connect closed
+31:Start Judge
+31:Compiling
+31:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 2000 65535 380 ./rundir/31/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 2000 65535 380 ./rundir/31/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 2000 65535 380 ./rundir/31/
+31:Time Limit Exceeded
+connect closed
+32:Start Judge
+32:Compiling
+32:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 2000 65535 380 ./rundir/32/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 2000 65535 380 ./rundir/32/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 2000 65535 380 ./rundir/32/
+32:Accepted
+connect closed
+33:Start Judge
+33:Compiling
+33:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 2000 65535 380 ./rundir/33/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 2000 65535 380 ./rundir/33/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 2000 65535 380 ./rundir/33/
+33:Time Limit Exceeded
+connect closed
+connect closed
+34:Start Judge
+34:Compiling
+34:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 2000 65535 380 ./rundir/34/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 2000 65535 380 ./rundir/34/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 2000 65535 380 ./rundir/34/
+34:Accepted
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+35:Start Judge
+35:Compiling
+35:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 4.in 4.out 4.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 5.in 5.out 5.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 6.in 6.out 6.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 7.in 7.out 7.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 8.in 8.out 8.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 9.in 9.out 9.ans 1000 65535 380 ./rundir/35/
+cmd is ..\..\Judger "main" 10.in 10.out 10.ans 1000 65535 380 ./rundir/35/
+35:Accepted
+connect closed
+connect closed
+connect closed
+1:Start Judge
+1:Compiling
+1:Running
+cmd is ..\..\Judger "main" 1.in 1.out 1.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 2.in 2.out 2.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 3.in 3.out 3.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 4.in 4.out 4.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 5.in 5.out 5.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 6.in 6.out 6.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 7.in 7.out 7.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 8.in 8.out 8.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 9.in 9.out 9.ans 1000 65535 380 ./rundir/C1_1/
+cmd is ..\..\Judger "main" 10.in 10.out 10.ans 1000 65535 380 ./rundir/C1_1/
+1:Accepted
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+1:Start Judge
+1:Compiling
+1:Compile Error
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+connect closed
+36:Start Judge
+36:Compiling
+36:Compile Error
+connect closed

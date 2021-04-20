@@ -1,0 +1,65 @@
+<%- include header.html %>
+<div class="panel panel-default">
+  <div class="panel-heading">用户信息 <%if(isadmin){%> <a class="label label-primary" href="/admin/user/<%=users.username%>">编辑</a><%}%></div>
+  <div class="panel-body">
+	<div class="panel panel-default float-center" style="width:450px;">
+	<table class="table">
+		<tr>
+			<td>用户名</td>
+			<td><%=users.username%></td>
+		</tr>
+		<tr>
+			<td>电子邮件</td>
+			<td><%=users.email%></td>
+		</tr>
+		<tr>
+			<td>注册日期</td>
+			<td><%=users.regDate.toNiceDate()%></td>
+		</tr>
+		<tr>
+			<td>最后一次登录时间</td>
+			<td><%=users.lastLogin.toNiceDate()%></td>
+		</tr>
+		<tr>
+			<td>提交次数</td>
+			<td><%=users.submissions%></td>
+		</tr>
+		<tr>
+			<td>通过次数</td>
+			<td><%=users.accepted%></td>
+		</tr>
+		<tr>
+			<td>通过率</td>
+			<td><%=(users.accepted/userinfo.submissions*100).toFixed(2)%>%</td>
+		</tr>
+		<tr>
+			<td>座右铭</td>
+			<td><%=users.motto%></td>
+		</tr>
+	</table>
+	</div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">最近解决的题目</div>
+  <div class="panel-body">
+	<%
+		var unsolved=[];
+		for(var x in users.submitted)
+			if(users.submitted[x]=='Accepted'){%>
+			<a href="/P/<%=x%>" class="label label-primary"><%=x%></a>
+			<%}else{
+				unsolved.push(x);
+			}
+	%>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">最近未解决的题目</div>
+  <div class="panel-body">
+  <%for(var i=0;i<unsolved.length;i++){%>
+	<a href="/P/<%=unsolved[i]%>" class="label label-default"><%=unsolved[i]%></a>
+  <%}%>
+  </div>
+</div>
+<%- include footer.html %>

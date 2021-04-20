@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+<table class="mytable">
+<tr>
+<td>
+<a href="/admin/problem" class="btn btn-default">添加题目</a>
+</td>
+<td>
+<a href="/admin/contest" class="btn btn-default">添加比赛</a>
+</td>
+<td>
+<a href="/admin/judger" class="btn btn-default">评测机</a>
+</td>
+<td>
+<div class="input-group input-group">
+  <input type="text" class="form-control" id="problemID" data-enter="#btnProblem" placeholder="题目序号">
+  <span class="input-group-btn">
+	<button class="btn btn-default" id="btnProblem" data-href="#problemID" data-hrefhead="/admin/problem/">编辑题目</button>
+  </span>
+</div>
+</td>
+
+<td>
+<div class="input-group input-group">
+  <input type="text" class="form-control" id="userID" data-enter="#btnUser" placeholder="账号">
+  <span class="input-group-btn">
+	<button class="btn btn-default" id="btnUser" data-href="#userID" data-hrefhead="/admin/user/">编辑用户</button>
+  </span>
+</div>
+</td>
+</tr>
+</table>
+</div>

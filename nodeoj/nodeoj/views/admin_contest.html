@@ -1,0 +1,86 @@
+<%- include header.html %>
+<%- include admin_header.html%>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<div class="panel panel-default">
+  <div class="panel-heading"><%if(contest.id){%>比赛信息编辑 <a class="float-right" href="/C/<%-contest.id%>">查看该比赛</a><%}else{%>添加比赛<%}%></div>
+  <div class="panel-body">
+  <form method="post">
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">比赛标题</span>
+			  <input name="title" type="text" value="<%-contest.title%>" class="form-control">
+			</div>
+			<br>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">比赛规则</span>
+			  <input name="rule" type="text" value="<%-contest.rule%>" class="form-control"
+			  placeholder="默认ACM">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">入口密码</span>
+			  <input name="password" type="text" value="<%-contest.password%>" class="form-control" placeholder="默认没有">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">由谁创建</span>
+			  <input name="manager" type="text" value="<%-contest.manager%>" class="form-control" placeholder="默认您自己">
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">开始时间</span>
+			  <input name="begin" type="text" value="<%-contest.begin.toNiceTime()%>" class="form-control">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">结束时间</span>
+			  <input name="end" type="text" value="<%-contest.end.toNiceTime()%>" class="form-control">
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">注册开始</span>
+			  <input name="regBegin" type="text" value="<%-contest.regBegin.toNiceTime()%>" class="form-control">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-group">
+			  <span class="input-group-addon">注册结束</span>
+			  <input name="regEnd" type="text" value="<%-contest.regEnd.toNiceTime()%>" class="form-control">
+			</div>
+		</div>
+	</div>
+
+	<h3>比赛简介</h3>
+	<textarea name="description"><%-contest.description%></textarea>
+	<script>CKEDITOR.replace('description',{height:'350px'});</script>
+	<br>
+	  <div class="text-center">
+		<%if(contest.id){%>
+		<input class="btn btn-default" type="submit" value="保存修改">
+		<a class="btn btn-default" href="/admin/contest/<%=contest.id%>/problem">编辑题目列表</a>
+		<a class="btn btn-default" href="/admin/contest/<%=contest.id%>/adduser">添加用户</a>
+		<button class="btn btn-default" type="button" id="deleteContest">删除</button>
+		<%}else{%>
+		<input class="btn btn-default" type="submit" value="添加比赛">
+		<%}%>
+	  </div>
+  </form>
+  </div>
+</div>
+<%- include footer.html %>

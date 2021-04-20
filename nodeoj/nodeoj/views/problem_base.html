@@ -1,0 +1,102 @@
+<script src="/CodeMirror/codemirror.js"></script>
+<link rel="stylesheet" href="/CodeMirror/codemirror.css">
+<script src="/CodeMirror/clike.js"></script>
+<script src="/CodeMirror/pascal.js"></script>
+<script src="/CodeMirror/python.js"></script>
+<script src="/CodeMirror/matchbrackets.js"></script>
+
+<h1 class="text-center"><%=p.title%><%if(isadmin){%>
+<%if(p.hidden){%>
+	<a href="#" onclick="ShowProblem(<%=p.id%>);" class="label label-warning">显示</a>
+<%}else{%>
+	<a href="#" onclick="HideProblem(<%=p.id%>);" class="label label-default">隐藏</a>
+<%}%>
+<a class="label label-primary" href="/admin/problem/<%=p.id%>">编辑</a>
+<a class="label label-success" href="/admin/problem/<%=p.id%>/data">数据</a>
+<%}%></h1>
+<table class="autotable" align="center">
+	<tr>
+		<td><b>时间限制:</b><%=p.timeLimit%>ms</td>
+		<td><b>内存限制:</b><%=p.memoryLimit%>KB</td>
+	</tr>
+	<%if(typeof(contest)=='undefined'||!contest||!contest.rule||new Date>contest.end||isadmin){%>
+	<tr>
+		<td><b>总提交数:</b><%=p.submissions%></td>
+		<td><b>总通过数:</b><%=p.accepted%></td>
+	</tr>
+	<%}%>
+</table>
+<br>
+<%- include problem_submits.html %>
+<h3>题目描述</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%-p.description%>
+  </div>
+</div>
+<h3>输入说明</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%-p.input%>
+  </div>
+</div>
+<h3>输出说明</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%-p.output%>
+  </div>
+</div>
+<h3>样例输入</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <pre class="SlateFix"><%-p.sampleInput%></pre>
+  </div>
+</div>
+<h3>样例输出</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <pre class="SlateFix"><%-p.sampleOutput%></pre>
+  </div>
+</div>
+<%if(p.hint){%>
+<h3>解题提示</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%-p.hint%>
+  </div>
+</div>
+<%}%>
+<%if(p.source){%>
+<h3>题目来源</h3>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%-p.source%>
+  </div>
+</div>
+<%}%>
+<%- include problem_submits.html %>
+
+<div class="modal fade" id="submitcode" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+	  <form action="<%-submitaction%>" method="post">
+		  <div class="modal-body" id="codemodalbody">
+			<textarea hidden name="code" id="codeeditor"></textarea>
+		  </div>
+		  <div class="modal-footer">
+			<div class="float-left">
+				语言
+				<select name="language" id="language" style="height:32px;width:120px;">
+					<%(function(){
+						var lans=['C','C++','Java','Python2.7'];
+						for(var i=0;i<lans.length;i++){%>
+					<option value="<%=lans[i]%>"><%=lans[i]%></option><%}})()%>
+				</select>
+				<input type="submit" class="btn btn-primary" value="提交">
+			</div>
+			<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		  </div>
+	  </form>
+    </div>
+  </div>
+</div>

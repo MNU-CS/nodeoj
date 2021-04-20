@@ -1,0 +1,10 @@
+<%if(typeof(contest)=='undefined')contest=null;%>
+<div class="text-center">
+	<div class="btn-group">
+	  <button type="button" class="btn btn-default" id="btnShowSubmit" data-backdrop="static" data-toggle="modal" data-target="#submitcode">提交</button>
+	  <a type="button" class="btn btn-default" href="../status/?problem=<%=contest?pid:p.id%>">状态</a>
+	  <%if(!contest||!contest.rule||new Date>contest.end||isadmin){%>
+	  <a type="button" class="btn btn-default" href="<%if(contest){%>/C/<%=contest.id%>/Discuss/P/<%=pid%><%}else{%>/Discuss/P/<%-p.id%><%}%>">讨论</a>
+	 <%}%>
+	</div>
+</div>

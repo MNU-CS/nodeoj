@@ -1,0 +1,17 @@
+<%- include header.html %>
+
+<%- include pagination.html %>
+
+<form action="/Contest/" id="problem-search">
+	<div class="input-group">
+	  <input type="text" name="search" value="<%=req.query.search%>" class="form-control" placeholder="比赛标题关键词">
+	  <div class="input-group-btn">
+		<button type="button" class="btn btn-default" tabindex="-1">查找</button>
+	  </div>
+	</div>
+</form>
+<%- include contestlist_sub.html %>
+<div class="text-center">
+<%- include pagination.html %>
+</div>
+<%- include footer.html %>
